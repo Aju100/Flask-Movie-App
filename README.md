@@ -17,7 +17,7 @@ sudo apt install git
 sudo apt install python3
 sudo apt get python3-pip
 pip3 install pipenv
-git clone https://github.com/Aju100/Django-Movie-App.git
+git clone https://github.com/Aju100/Flask-Movie-App.git
 cd Django-Movie-App
 pipenv install
 python3 app.py
@@ -26,8 +26,8 @@ python3 app.py
 Windows:
 You can download git and python3 and install pip as well as pipenv package.
 ```sh
-git clone https://github.com/Aju100/Django-Movie-App.git
-cd Django-Movie-App
+git clone https://github.com/Aju100/Flask-Movie-App.git
+cd Flask-Movie-App
 pipenv install
 python app.py
 ```
@@ -51,7 +51,7 @@ Aju Tamang - ajutamang10@outlook.com
 
 ## Contributing
 
-1. Fork it (<https://github.com/Aju100/Django-Movie-App.git>)
+1. Fork it (<https://github.com/Aju100/Flask-Movie-App.git>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)

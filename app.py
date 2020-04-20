@@ -22,11 +22,10 @@ def search():
     jsonresp=searchreq(title)
     results=jsonresp["Search"]
     return render_template("search_results.html",results=results)
-
+    
 @app.errorhandler(404)
 def notfound(error):
     return render_template('notfound.html'),404
-
 
 if __name__=="__main__":
     app.run(debug=True)

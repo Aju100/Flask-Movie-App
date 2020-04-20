@@ -42,6 +42,11 @@ python app.py
 
 ## Release History
 
+* 0.0.2
+	* Fixes the about pages
+	* Added Favourites features
+	* Integrate with database
+
 * 0.0.1
 	* Work in progress
 

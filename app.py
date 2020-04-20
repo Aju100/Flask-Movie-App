@@ -24,6 +24,10 @@ def search():
 	except Exception as e:
 		return render_template("notfound.html"),404
 
+@app.route('/favourites')
+def favourite():
+	return render_template('favourites.html')
+
 @app.errorhandler(404)
 def notfound(error):
 	return render_template('notfound.html'),404

@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
-{% block content %}
-<br>
+{% block content%}
+  <br>
   <div class="container">
-
   <div class="alert alert-primary" role="alert">
-    Flask Movie Search App using omdbapi API. 
+    Favourites
+    {% for movie in favourites %}
+    	<p>{{movie["title"]}}</p>
+    {% endfor %}
   </div>
 </div>
 {% endblock %}

@@ -18,7 +18,7 @@ sudo apt install python3
 sudo apt get python3-pip
 pip3 install pipenv
 git clone https://github.com/Aju100/Flask-Movie-App.git
-cd Django-Movie-App
+cd Flask-Movie-App
 pipenv install
 python3 app.py
 ```

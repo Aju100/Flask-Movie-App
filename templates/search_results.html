@@ -12,15 +12,21 @@
     {% for each in results %}
     <div class="col mb-4">
       <div class="card">
-        <img src="{{each['Poster']}}" class="card-img-top" alt="...">
+        <img src="{{each['Poster']}}" class="card-img-top" id="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">{{each["Title"]}}</h5>
-          <p class="card-text">Year : {{each['Year']}}<br>
-            Type : {{each['Type']}}<br>
-            Imdb : <a href="http://www.imdb.com/title/{{each['imdbID']}}">Details</a><br>
-           <button type="button" class="btn btn-primary" id="1"> <a href="{{url_for('favourite')}}" style="color: white;">Add to Favourite</a></button>
+          <h5 class="card-title" id="title">{{each["Title"]}}</h5>
+          <p class="card-text" id="year">Year : {{each['Year']}}<br>
           </p>
-        </div>
+          <p id="type">
+            Type : {{each['Type']}}<br>
+          </p>
+          <p id="details">
+            Imdb : <a href="http://www.imdb.com/title/{{each['imdbID']}}"/>
+            Details</a>
+          </p>
+          <br>
+            <button type="button" class="btn btn-primary" id="click" onclick="favadder()" style="color: white;">Add to Favourite</a></button>
+         </div>
       </div>
     </div>
     {% endfor %}

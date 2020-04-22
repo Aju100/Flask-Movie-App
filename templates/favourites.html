@@ -1,14 +1,52 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block content%}
   <br>
-  <div class="container">
+<div class="container">
+  <br>
   <div class="alert alert-primary" role="alert">
-    Favourites
-    {% for movie in favourites %}
-    	<p>{{movie["title"]}}</p>
-    {% endfor %}
+    <h3>Favourite</h3>
+  </div>
+
+  {%with msg=get_flashed_messages()%}
+    {%if msg%}
+    {%for each in msg%}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        
+        {{each}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {%endfor%}
+    {%endif%}
+  {%endwith%}
+
+  {%if results%}
+    <div class="row row-cols-1 row-cols-md-3">
+      {% for each in results %}
+      <div class="col mb-4">
+        <div class="card">
+          <img src="{{each['Poster']}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{each["Title"]}}</h5>
+            <p class="card-text">Year : {{each['Year']}}<br>
+              Type : {{each['Type']}}<br>
+              Imdb : <a href="http://www.imdb.com/title/{{each['imdbID']}}">Details</a><br>
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  {%endif%}
+  {%if not msg%}
+    No Movie in Favourites
+  {%endif%}
+
   </div>
 </div>
+
+
 
 {% endblock %}

@@ -3,7 +3,7 @@ function favadder(){
     
     //and check if works in mobile or not
     //change this during porduction
-    url="http://localhost:5000";
+    url="http://simplymovieapp.herokuapp.com/";
     xhr.open('POST',url);
     xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
    /* document.addEventListener("DOMContentLoaded", function(event) { 
